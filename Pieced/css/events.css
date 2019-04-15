@@ -1,0 +1,122 @@
+/*
+  A CSS stylesheet created from Tabs N' Blanks, a hypothetical store selling 3D woodcraft puzzles, for the purpose of a web design course project
+
+  CREATED BY: IAT339 D101 WINONA HUANG 301165181
+                          JOANNE GOH 301140652;
+*/
+
+  *, *::after, *::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+
+/* Styling for the events posts */
+	
+	.coming-up-events {
+		margin-top: 3em; /*temporary needs to be changed */
+	}
+
+	.coming-up-events,
+	.popular-events {
+		text-align: center;
+		margin-bottom: 5em; /*avoid the view more button border bottom getting cut off by the footer*/
+		padding-right: 0; /* reverses gutter */
+	}
+	   
+	.coming-up-events ul.img-list,
+	.popular-events ul.img-list {
+		list-style-type: none;
+		display: block;
+		padding-left: 0;
+	}
+
+	.coming-up-events ul.img-list li,
+	.popular-events ul.img-list li {
+	  padding: 0.5em;
+	  margin-bottom: 1.5em;
+	  display: inline-block;
+	}
+
+	.coming-up-events ul.img-list li img, 
+	.popular-events ul.img-list li img {
+	  margin-bottom: 0.5em;
+	}
+
+	.coming-up-events p,
+	.popular-events p {
+		width:40%;
+		margin: auto;
+		margin-top:1em;
+	}
+
+
+	.coming-up-events ul.img-list li h4,
+	.popular-events ul.img-list li h4 {
+		/*margin-top: 0.2em;*/
+		font-size: 0.70rem; /* replace initial size */
+	}
+
+
+	/*
+		RESPONSIVE for the events post listing 
+	*/
+
+	@media (max-width: 64.063em) {
+		#coming-up .grid-col-1of10.blank,
+		 #popular .grid-col-1of10.blank {
+			display: none;
+		}
+
+		#coming-up .grid-col-8of10.coming-up-events,
+		 #popular .grid-col-8of10.popular-events {
+			width: 100%;
+		}
+
+	}
+
+	@media(max-width: 61.563em) {
+		.coming-up-events p,
+		.popular-events p {
+			width: 45%;
+		}
+	}
+
+	@media(max-width: 54.813em) {
+		.coming-up-events p,
+		.popular-events p {
+			width: 50%;
+		}
+	}
+
+
+	@media (max-width: 51.375em) {
+		.coming-up-events p,
+		.popular-events p {
+			width: 60%;
+		}
+	}
+
+	@media(max-width: 41.25em) {
+		.coming-up-events p,
+		.popular-events p {
+			width: 65%;
+		}
+	}
+
+	@media(max-width: 38.25em) {
+		.coming-up-events p,
+		.popular-events p {
+			width: 75%;
+		}
+	}
+
+
+	@media(max-width: 33.19em) {
+		.coming-up-events p,
+		.popular-events p {
+			width: 85%;
+		}
+	}
+

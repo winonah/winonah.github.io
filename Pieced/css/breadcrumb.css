@@ -1,0 +1,113 @@
+/*
+  A CSS stylesheet created from Tabs N' Blanks, a hypothetical store selling 3D woodcraft puzzles, for the purpose of a web design course project
+
+  CREATED BY: IAT339 D101 WINONA HUANG 301165181
+                          JOANNE GOH 301140652;
+*/
+
+*, *::after, *::before {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+
+/* 
+	EMPTY BREADCRUMB
+*/
+
+	hr.empty-breadcrumb {
+	  display: block;
+	  border: 0;
+	  border-top: 35px solid #F2EDE7;
+	  margin: 0.7em 0 0 0;
+	  padding: 0;
+	}
+
+
+
+
+/* 
+	BREADCRUMBS 
+*/ 
+
+	ul.breadcrumb { 
+		background: #F2EDE7;
+		list-style: none; 
+		overflow: hidden; 
+		margin-top: 0.6em;
+	    padding-left: 4em;
+	}
+
+	ul.breadcrumb li { 
+		float: left; 
+		display: inline;
+	}
+
+
+	ul.breadcrumb li a {
+		color: #7D7D7D;
+		font-family: AGaramond-Italics;
+		font-size: 0.875rem;
+		letter-spacing: 0.025em;
+		text-decoration: none; 
+	  padding: 10px 0 8px 1.5em;
+		position: relative; 
+		display: block;
+		float: left;
+	}
+
+	ul.breadcrumb li a:hover {
+		color: #C1B087;
+	/*	text-decoration: underline;*/
+	}
+
+	ul.breadcrumb li::before { 
+		font-family: AGaramond-Italics;
+		font-size: 1rem;
+		color: #7D7D7D;
+
+		/* styling for forward slash that separates links */
+		content: '/';
+		display: inline-block;
+		margin-top: 0.5rem;
+		padding-left: 1.5rem;
+	}
+
+
+
+	/*
+		RESPONSIVE for the breadcrumb 
+	*/
+		@media(max-width: 34.438em) {
+			hr.hidden {
+				display: none;
+			}
+
+			ul.breadcrumb {
+				display: none;
+			}
+		
+		}
+
+
+	/* 
+		RESPONSIVE for shop.html
+	*/
+
+
+    @media (max-width: 54.875em) {
+
+		ul.breadcrumb {
+			padding-left: 3em;
+		}
+
+    }
+
+/*     @media (max-width: 48.625em) {
+
+		ul.breadcrumb {
+			padding-left: 3em;
+		}
+
+    }*/

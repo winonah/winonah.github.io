@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--
+  A Website created for Pieced, a hypothetical store selling 3D woodcraft puzzles, for the purpose of a web design course project
+
+  CREATED BY: IAT339 D101 WINONA HUANG 301165181
+                          JOANNE GOH 301140652;
+-->
+
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Citations - Pieced</title>
+
+		<!-- grid.css specifies the grid structure-->
+		<link href="css/grid.css" rel="stylesheet">
+		<!-- main.css includes styling for basic elements: text elements, navigation menu, footer, buttons?-->
+		<link href="css/main.css" rel="stylesheet">
+
+		<!-- other stylesheets link goes here -->
+		<link href="css/events.css" rel="stylesheet">
+		<link href="css/breadcrumb.css" rel="stylesheet">
+		<link href="css/citations.css" rel="stylesheet">
+		<link href="css/modal2.css" rel="stylesheet">
+
+		
+	</head>
+
+
+
+	<body>
+	<div class="container">
+
+		<!-- NAVIGATION MENU -->
+		<section class="grid">
+
+			<div class="grid-col-2of10 logo">
+				<a href="../P02_style_guide/styleguide.html" class="logo-link">
+					<img src="img/styleguide-logo.png" width="150" height="53" alt="a logo image for pieced, a company selling 3D woodcraft puzzles">
+				</a>
+			</div> <!-- closing <div class="grid-col-2of10"> -->
+
+			<div class="grid-col-6of10 main-nav">
+				
+				<ul class="nav-menu">
+					<li><a href="index.html"><span>Website</span></a></li>
+					<li><a href="../P02_style_guide/styleguide.html"><span>Style Guide</span></a></li>
+				</ul> <!-- closing <ul class="nav-menu"> -->
+			
+
+				<div class="nav-combined">
+					<a href="#" class="nav-toggle">Menu</a>
+
+					<ul class="nav-menu">
+						<li><a href="index.html"><span>Website</span></a></li>
+						<li><a href="../P02_style_guide/styleguide.html"><span>Styleguide</span></a></li>
+					</ul> <!-- closing <ul class="nav-menu"> -->
+
+				</div> <!-- closing <div class="nav-combined"-->
+
+			</div> <!-- closing <div class="grid-col-6of10 main-nav"> -->
+
+			<div class="grid-col-2of10 side-nav">
+				&nbsp;
+			</div> <!-- closing <div class="grid-col-2of10 side-nav"> -->
+				
+		</section> <!-- closing <div class="grid"> -->
+		<!-- END OF NAVIGATION MENU SECTION -->
+
+
+
+		<hr class="empty-breadcrumb hidden"/> <!-- empty breadcrumb -->
+
+
+
+		<!-- COMING UP citations SECTION -->
+		<section id="citations" class="grid">
+
+			<div class="grid-col-1of10 blank">
+				&nbsp;
+			</div> <!-- closing .grid-col-1of10 and blank-->
+
+			<div class="grid-col-8of10 citations">
+						
+				<!-- EMPTY CART MODAL -->
+
+				<div class="modal" id="modal-cart" aria-hidden="false">
+				  
+				  <div class="modal-dialog">
+				    
+				    <div class="modal-header">
+						<h3>My Cart</h3>
+						<a href="#close" class="button-close-modal" aria-hidden="false">×</a>
+				    </div> <!-- closing .modal-head -->
+
+				    <div class="modal-body">
+				    	<h4> Your cart is currently empty.</h4>
+				    </div> <!-- closing .modal-body -->
+
+				    <div class="modal-footer">
+						<a href="#" class="button-default">Continue Shopping</a>
+				    </div> <!-- closing .modal-footer -->
+				  
+				  </div> <!-- closing <div class="modal-dialog">-->
+				
+				</div> <!-- closing <div class="modal" id="modal-cart"> -->
+				<!-- END OF EMPTY MODAL CART -->
+				 
+			</div> <!-- <div class="grid-col-8of10 citations"> -->
+
+			
+
+			<div class="grid-col-1of10 blank">
+				&nbsp;
+			</div> <!-- closing grid-col-1of10 and .blank-->
+
+		</section> <!-- closing .grid -->
+		<!-- END OF COMING UP CITATIONS SECTION -->
+
+	</div> <!-- close <div class="container" div -->
+
+
+	
+
+
+	<!-- loading javascript for the nav-menu dropdown -->
+	<script src="js/jquery.js"></script>
+	<script src="js/nav-menu-dropdown.js"></script>
+
+
+
+	</body>
+
+</html>

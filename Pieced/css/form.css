@@ -1,0 +1,66 @@
+/*
+  A CSS stylesheet created from Tabs N' Blanks, a hypothetical store selling 3D woodcraft puzzles, for the purpose of a web design course project
+
+  CREATED BY: IAT339 D101 WINONA HUANG 301165181
+                          JOANNE GOH 301140652;
+*/
+
+  *, *::after, *::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+
+  
+/*
+  FORM FIELD & lABELS
+*/
+
+  /* Styling for form-fields */
+
+  .form-field {
+      font-family: Avenir-Book;
+      text-transform: uppercase;
+      width:100%;
+      background: transparent;
+      margin: 0.5em 0; 
+      border: 1px solid #d8d8d8;
+      padding: 1.5em 1em; /* form field */
+      -webkit-transition: all 0.2s ease;
+       -moz-transition: all 0.2s ease;
+         -o-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+  }
+
+  /* Styling for form-field border and text */
+  .form-field:focus {
+     color: #5E5E5E; /* text colour */
+     border: 1px solid #c1b087; /* border colour */
+     outline:none;
+  }
+
+
+
+/* 
+  TEXT AREA 
+*/
+
+  .message-box {
+    font-family: Avenir-Book;
+    text-transform: uppercase;
+    width:100%;
+    height:10em;
+    padding: 1em 1em;
+    background: transparent;
+    margin-top:.5em;
+    border: 1px solid #d8d8d8;
+  }
+
+  /* Styling for form-field border and text */
+  .message-box:focus {
+    color: #5E5E5E; /* text colour */
+    border: 1px solid #c1b087;
+    outline: none;
+  }

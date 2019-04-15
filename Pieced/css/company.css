@@ -1,0 +1,175 @@
+/*
+  A CSS stylesheet created from Tabs N' Blanks, a hypothetical store selling 3D woodcraft puzzles, for the purpose of a web design course project
+
+  CREATED BY: IAT339 D101 WINONA HUANG 301165181
+                          JOANNE GOH 301140652;
+*/
+
+*, *::after, *::before {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+
+
+/* 
+	ABOUT US
+*/
+
+
+	#about-us {
+		margin: 5em auto;
+
+		width: 70%;
+		text-align: center;
+	}
+
+	#about-us .grid-col-6of10 {
+		padding-right: 0;
+	}
+
+	.company-mission {
+		margin-bottom: 2em;
+	}
+
+
+	/* 
+		RESPONSIVE for ABOUT US
+	*/
+
+/*	@media (max-width: 73.5em) {
+		#about-us .grid-col-6of10 {
+			width: 80%;
+		}
+	}*/
+
+	@media (max-width: 55.375em) {
+		#about-us .grid-col-2of10.blank {
+			display: none;
+		}
+
+		#about-us .grid-col-6of10 {
+			width: 100%;
+		}
+	}
+
+	@media (max-width: 44.5em) {
+
+		#about-us {
+			width: 80%;
+		}
+	}
+
+	@media (max-width: 39.063em) {
+
+		#about-us {
+			width: 90%;
+		}
+	}
+
+
+
+
+/* 
+	CONTACT US 
+*/
+
+	#contact-us {
+		margin-left: auto;
+		margin-right: auto;
+		width: 60%;
+		text-align: center;
+		margin-bottom: 3em;
+	}
+
+	#contact-us p {
+		width:50%;
+		margin: 1em auto 2em auto;
+	}
+
+	/* margin bottom form the entire form */
+	.contact-form {
+		margin-bottom: 2em;
+	}
+
+	.sm-icons img {
+		color: #7d7d7d;
+		margin:1.5em .7em 0 .7em ;
+		margin-bottom: 1em;
+		margin-top:0;
+	}
+
+	/*splash image for company page */
+
+	#company-landingimg {
+		margin: auto;
+		display: table;
+	}
+
+	#company-landingimg img {
+		max-width: 100%;
+  	/*	width: auto;
+  		height: auto;*/
+  		 /*margin: 0 auto;*/
+
+  		/*image sourced from Cereal Magazine*/
+	}
+
+
+	/* 
+		RESPONSIVE for ABOUT US
+	*/
+
+	@media (max-width: 73.5em) {
+		#contact-us {
+			width: 70%;
+		}
+
+		#contact-us p {
+			width: 70%;
+		}
+
+		.contact-form .grid-col-5of10 {
+			width: 50%;
+		}
+	}
+
+	@media (max-width: 55.375em) {
+		#contact-us {
+			width: 80%;
+		}
+
+		#contact-us p {
+			width: 50%;
+		}
+
+		.contact-form .grid-col-5of10 {
+			width: 50%;
+		}
+
+	}
+
+	@media (max-width: 46em) {
+		#contact-us {
+			width: 90%;
+			margin-top: 3em;
+		}
+
+		#contact-us p {
+			width: 85%;
+		}
+
+		.contact-form .grid-col-5of10 {
+			width: 80%;
+			margin-left: 3em;
+			padding-right: 0;
+		}
+
+	}
+
+	@media (max-width: 34.438em) {
+		.contact-form .grid-col-5of10 {
+			margin-left: 2em;
+		}
+	}

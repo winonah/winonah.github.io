@@ -1,0 +1,562 @@
+/*
+  A CSS stylesheet created for Pieced, a hypothetical store selling 3D woodcraft puzzles, for the purpose of a web design course project
+
+  CREATED BY: IAT339 D101 WINONA HUANG 301165181
+                          JOANNE GOH 301140652;
+*/
+
+	*, *::after, *::before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	}
+
+
+/* Reference Retrieved from: 
+	http://codepen.io/maccadb7/pen/nbHEg */
+
+
+/*
+	CART MODAL 
+*/
+
+	.modal:target::before {
+	  display: block;
+	}
+
+
+	/* Styling for the entire modal cart popup */
+
+	.modal-dialog {
+		background: white;
+		border: #C1B087 solid 1px;
+		
+		position: fixed; /* listen to the viewport */
+		top: 11em;
+		left: 25%;
+
+		z-index: 11;
+		width: 40em; /* width of the modal */
+
+		
+	}
+
+
+	/* Styling for the header in the modal dialog */
+
+	.modal-header {
+		border-bottom: #F2EDE7 solid 1px;
+	    padding: 1.5em 0;
+		width: 90%;
+		margin-left: 2em;
+	}
+	.modal-header h3 {
+	  font-family: Avenir-Medium;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      color: #5e5e5e;
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: 0;
+      text-align: left;
+	}
+
+
+	/* Styling for the "X" on the top right to close modal */
+
+	.button-close-modal {
+		color: #7D7D7D;
+		font-size: 2rem;
+		text-decoration: none;
+		position: fixed;
+		top: 15.4em;
+		right: 27em;
+	}
+
+	.button-close-modal:hover {
+	  color: #C1B087;
+	}
+
+
+	/* Styling for the cart item displays */
+
+	.modal-body {
+		margin: 1.5em 2em;
+	}
+
+	/* Product Name */
+	.modal-body h4 {
+		margin-top: 2em;
+	}
+
+	/* Product Quantity and Price */
+	.modal-body p {
+		margin-top: 2.2em;
+	}
+	.modal-footer a:hover {
+		color: white;
+	}
+
+	/* Remove Button Positioning */
+	.modal-body .grid-col-2of10 {
+		margin-top: 1.5em;
+	}
+
+
+	/* Styling for the footer in the modal dialog */
+
+	.modal-footer {
+		border-top: #F2EDE7 solid 1px;
+		width: 90%;
+		margin: 1.5em 2em;
+		padding: 1em 0;
+	}
+
+	.modal-footer .grid {
+		margin-right: 1.5em;
+	}
+
+
+	#modal-cart .modal-footer a.button-default,
+	 #modal-order-placed .modal-footer a.button-default {
+		float: right;
+		margin: 2em 3.5em 2em 0;
+	}
+
+	/* 
+		RESPONSIVE for cart modal & order-placed modal
+	*/
+
+	@media (max-width: 70em) {
+		
+		#modal-cart .modal-dialog,
+		 #modal-order-placed .modal-dialog {
+			position: fixed;
+			left: 20%;
+		}
+	}
+
+	@media (max-width: 62.5em) {
+		
+		#modal-cart .modal-dialog,
+		 #modal-order-placed .modal-dialog {
+			position: fixed;
+			left: 10%;
+		}
+	}
+
+	@media (max-width: 53.875em) {
+		
+		#modal-cart .modal-dialog,
+		 #modal-order-placed .modal-dialog {
+			width: 30em;
+			position: fixed;
+			left: 20%;
+		}
+
+		#modal-cart .modal-body .grid-col-3of10 {
+			width: 40%;
+		}
+
+		#modal-cart .modal-body h4.grid-col-3of10,
+		 #modal-order-placed .modal-body h4.grid-col-3of10 {
+			width: 60%;
+			margin-top: 0.5em; 
+		}
+
+		#modal-cart .modal-body p.grid-col-1of10 {
+			width: 20%;
+		}
+
+		#modal-cart .modal-body .grid-col-2of10 {
+			width: 20%;
+		}
+
+		#modal-cart .modal-footer .grid-col-7of10.blank {
+			width: 60%;
+		}
+
+		#modal-cart .modal-footer h3.grid-col-2of10 {
+			width: 30%;
+			font-size: 0.875rem;
+		}
+
+		#modal-cart .modal-footer h3.grid-col-1of10 {
+			width: 10%;
+			font-size: 0.875rem;
+		}
+
+		#modal-cart .modal-footer a.button-default {
+			margin-right: 3em;
+		}
+
+	}
+
+	@media (max-width: 43em) {
+		
+		#modal-cart .modal-dialog,
+		 #modal-order-placed .modal-dialog {
+			position: fixed;
+			left: 10%;
+		}
+	}
+
+	@media (max-width: 34.438em) {
+
+		#modal-cart .modal-dialog,
+		 #modal-order-placed .modal-dialog {
+			width: 25em;
+			position: fixed;
+			top: 5%;
+			left: 12%;
+			bottom: 0;
+			overflow-y: auto;
+		}
+
+		#modal-cart .modal-header,
+		 #modal-order-placed .modal-header {
+			margin-left: 1.5em;
+			width: 82%;
+		}
+
+		#modal-cart .modal-body,
+		 #modal-order-placed .modal-body {
+			margin: 1.5em;
+		}
+
+		#modal-cart .modal-body .grid-col-3of10 {
+			width: 50%;
+			padding-right: 0;
+		}
+
+		#modal-cart .modal-body h4.grid-col-3of10 {
+			width: 50%;
+			font-size: 1rem;
+			margin-top: 0.1em;
+		}
+
+		#modal-cart .modal-body p.grid-col-1of10 {
+			margin: 0.5em 0;
+			font-size: 0.875rem;
+		}
+
+		#modal-cart .modal-body .grid-col-2of10 {
+			width: 100%;
+			margin-top: 0;
+			margin-left: 0.5em;
+		}
+
+		#modal-cart .modal-body a.button-secondary {
+			font-size: 0.75rem;
+		}
+
+		#modal-cart .modal-footer .grid-col-7of10.blank {
+			display: none;
+		}
+
+		#modal-cart .modal-footer h3.grid-col-2of10 {
+			width: 50%;
+		}
+
+		#modal-cart .modal-footer h3.grid-col-1of10 {
+			width: 50%;
+		}
+
+		#modal-cart .modal-footer,
+		 #modal-order-placed .modal-footer {
+			text-align: center;
+			font-size: 1rem;
+		}
+
+		#modal-cart .modal-footer a.button-default {
+  			margin-right: 7em;
+		}
+
+		#modal-order-placed .modal-footer a.button-default {
+  			margin-right: 3.5em;
+		}
+
+	}
+
+	@media (max-width: 29.375em) {
+
+		#modal-cart .modal-dialog,
+		 #modal-order-placed .modal-dialog {
+			position: fixed;
+			top: 5%;
+			left: 5%;
+			bottom: 0;
+			overflow-y: auto;
+		}
+	}
+
+	@media (max-width: 25em) {
+
+		#modal-cart .modal-dialog, 
+		 #modal-order-placed .modal-dialog {
+			position: fixed;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			overflow-y: auto;
+		}
+
+		#modal-cart .modal-footer,
+		 #modal-order-placed .modal-footer {
+			margin: 1.5em 1em;
+		}
+
+		#modal-cart .modal-footer a.button-default {
+  			margin-right: 6em;
+		}
+
+		#modal-order-placed .modal-footer a.button-default {
+  			margin-right: 3em;
+		}
+
+
+	}
+
+	@media (max-width: 20em) {
+		
+		#modal-cart .modal-dialog,
+		 #modal-order-placed .modal-dialog {
+			width: 20em;
+		}
+
+		#modal-cart .modal-footer,
+		 #modal-order-placed .modal-footer {
+			margin: 1.5em;
+		}
+
+		#modal-cart .modal-footer a.button-default {
+  			margin-right: 5em;
+		}
+
+		#modal-order-placed .modal-footer a.button-default {
+  			margin-right: 5em;
+		}
+	}
+
+
+
+
+/*
+	REVIEW MODAL
+*/
+
+
+  /* Styling for Giving how many Ratings in Review Modal 
+        Reference Retrieved from: https://css-tricks.com/star-ratings/;
+   */
+
+	/*.give-rating > span:hover:before {
+      content: "\2605";
+      position: absolute;
+    }*/
+
+    #modal-review .modal-header {
+      border-bottom: none;
+    }
+
+    #modal-review .modal-footer {
+      border-top: none;
+      text-align: center; /* center-align the submit button */
+    }
+
+    .give-rating {
+      /* unicode-bidi: bidi-override;*/
+      direction: rtl; /* direction of the span tag (top to bottom is equal to left to right)*/
+      font-size: 2rem; /* size of the stars */
+      color: #F2EDE7;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+
+    .give-rating > span:hover:before,
+    .give-rating > span:hover ~ span:before {
+       content: "\2605";
+       position: absolute;
+       color: #C1B087;
+    }
+
+    .review-form {
+    	width: 80%;
+    	margin: 0 3.5em;
+    }
+
+
+   	/* 
+		RESPONSIVE for review modal
+   	*/
+
+    @media (max-width: 70em) {
+		
+		#modal-reivew .modal-dialog {
+			position: fixed;
+			left: 20%;
+		}
+	}
+
+	/* repositioning of the modal-review */
+	@media (max-width: 62.5em) {
+		
+		#modal-review .modal-dialog {
+			position: fixed;
+			left: 10%;
+		}
+	}
+
+
+	@media (max-width: 53.875em) {
+		
+		#modal-review .modal-dialog {
+			width: 30em;
+			position: fixed;
+			left: 20%;
+		}
+
+		/* repositioning of the review form */
+		#modal-review .modal-body .review-form {
+			margin: 0 2.5em;
+		}
+	}
+
+
+	/* adjust positioning of modal-cart */
+	@media (max-width: 43em) {
+		
+		#modal-review .modal-dialog {
+			position: fixed;
+			left: 10%;
+		}
+	}
+
+
+	@media (max-width: 34.438em) {
+
+		#modal-review .modal-dialog {
+			width: 25em;
+			position: fixed;
+			top: 5%;
+			left: 12%;
+		}
+
+		#modal-review .modal-header {
+			margin-left: 1.5em;
+			width: 82%;
+		}
+
+		#modal-review .modal-body {
+			margin: 1.5em;
+		}
+
+		#modal-review .modal-body .review-form {
+			margin: 0 2em;
+		}
+
+		#modal-review .modal-footer {
+			margin-left: 1.5em;
+			width: 82%;
+		}
+
+
+	}
+
+
+	/* adjust modal-review positioning */
+	@media (max-width: 29.375em) {
+
+		#modal-review .modal-dialog {
+			position: fixed;
+			top: 5%;
+			left: 5%;
+		}
+	}
+
+	/* make modal-review align to the upper left corner on smaller resolution */
+	@media (max-width: 25em) {
+
+		#modal-review .modal-dialog {
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+
+		#modal-review .modal-footer {
+			margin: 1.5em 1em;
+		}
+	}
+
+
+	/* adjust modal-review width as resolution gets smaller */
+	@media (max-width: 20em) {
+		
+		#modal-review .modal-dialog {
+			width: 20em;
+		}
+
+		#modal-review .modal-footer {
+			margin: 1.5em;
+		}
+	}
+
+
+
+/*
+	RESPONSIVE for FILTER MODAL 
+*/	
+
+
+/*	@media (min-width: 34.438em) {
+		#modal-filter {
+			display: none;
+		}
+	}*/
+	
+	@media (max-width: 34.438em) {
+
+		#modal-filter {
+			display: block;
+		}
+
+		#modal-filter .modal-dialog {
+			width: 25em;
+			position: fixed;
+			top: 5%;
+			left: 12%;
+		}
+
+		#modal-filter .modal-body.filter-menu {
+			text-align: center;
+			padding: 0;
+		}
+
+		#modal-filter .modal-body ul li a {
+			text-align: center;
+			font-size: 0.875rem;
+		}
+
+		#modal-filter .modal-footer {
+			width: auto;
+			text-align: center;
+			margin: 1.5em 2em;
+		}
+
+	}
+
+	@media (max-width: 25em) {
+
+		#modal-filter .modal-dialog {
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	@media (max-width: 20em) {
+		
+		#modal-filter .modal-dialog {
+			width: 20em;
+		}
+	}

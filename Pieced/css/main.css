@@ -1,0 +1,525 @@
+/*
+  A CSS stylesheet created for Pieced, a hypothetical store selling 3D woodcraft puzzles, for the purpose of a web design course project
+
+  CREATED BY: IAT339 D101 WINONA HUANG 301165181
+                          JOANNE GOH 301140652;
+*/
+
+
+/* 
+  DEFAULT STYLING ----------------------------------
+*/
+
+  *, *::after, *::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+
+  /* 
+    TEXT ELEMENTS 
+  */
+  
+    body {
+      font-family: Avenir-Book;
+      font-size: 16px;
+      padding: 1rem;
+    }
+
+    /* Different Levels of Headings */
+    
+    h1 {
+      font-family: AGaramond-Regular;
+      font-size: 1.2rem;
+      letter-spacing: 0.1em;
+      color: #5E5E5E; /* was originally #454545 on style guide */
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-family: Avenir-Heavy;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      letter-spacing: 0.025em;
+      color: #5E5E5E;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    h3 {
+      font-family: Avenir-Medium;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      color: #5e5e5e;
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    h4 {
+      font-family: Avenir-Roman;
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+      color: #7d7d7d;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    p {
+      font-family: Avenir-Book;
+      font-size: .81rem;
+      color: #5E5E5E;
+    }
+
+
+  /* 
+    LOADING FONTS 
+  */
+
+    @font-face {
+        font-family: AGaramond-Regular;
+        src: url(fonts/AGaramondPro-Regular.otf);   
+    }
+
+    @font-face {
+        font-family: AGaramond-Italics;
+        src: url(fonts/AGaramondPro-Italic.otf);   
+    }
+
+    @font-face {
+        font-family: Avenir-Heavy;
+        src: url(fonts/Avenir-Heavy.ttf);   
+    }
+
+    @font-face {
+        font-family: Avenir-Medium;
+        src: url(fonts/Avenir-Medium.ttf);   
+    }
+
+    @font-face {
+        font-family: Avenir-Roman;
+        src: url(fonts/Avenir-Roman.ttf);   
+    }
+
+    @font-face {
+        font-family: Avenir-Book;
+        src: url(fonts/Avenir-Book.ttf);   
+    }
+
+
+
+/* 
+  NAVIGATION MENU -----------------
+*/
+  
+  /* Logo */
+
+  .logo img {
+    margin: 1.5em;
+    margin-left: 5em;
+  }
+
+
+  /* Main Navigation Menu */
+
+  .grid-col-6of10.main-nav {
+    padding-right: 0;
+  }
+
+  ul.nav-menu {
+    width: auto; /* width of underline */
+  }
+
+  ul.nav-menu {
+    list-style: none;
+    margin-top: 2em;
+    line-height: 1;
+    display: block;
+
+    text-align: center;
+  }
+
+  ul.nav-menu li {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+  }
+
+
+  ul.nav-menu li a {
+    color: #7D7D7D;
+    text-decoration: none;
+    display: block;
+    padding: 0.8rem 2em;
+    font-family: Avenir-Roman;
+    letter-spacing: 0.15rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  ul.nav-menu  li a:hover {
+    color: #C1B087;
+  } 
+
+  ul.nav-menu li a:hover:before {
+    width: 100%;
+  }
+
+  ul.nav-menu li a:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px; /* stroke weight */
+    width: 0;
+    background: #C1B087;
+    
+    /* animation speed left to right */
+    -webkit-transition: width .25s;
+    -moz-transition: width .25s;
+    -ms-transition: width .25s;
+    -o-transition: width .25s;
+    transition: width .25s;
+    
+  }
+
+
+  ul.nav-menu li.active a:before {
+    width: 100%;
+  }
+
+  /* Indicate the Page that is currently active*/
+  ul.nav-menu li.active a {
+    color: #C1B087;
+  }
+
+  ul.nav-menu li.active a:before {
+    color: #C1B087;
+    width: 100%;
+  }
+
+
+  /* Side Navigation Menu */
+  .side-nav {
+    text-align: right;
+  }
+
+  .side-nav ul.nav-menu li a {
+    font-family: AGaramond-Regular;
+    letter-spacing: 0.08rem;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    position: relative;
+
+    padding: 0.8rem 1em;
+
+  }
+
+  .side-nav ul.nav-menu li a:hover {
+    color: #C1B087;
+
+   }
+
+  .side-nav ul.nav-menu li a:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0px; /* no stroke weight */
+  }
+
+
+
+  /* 
+    Nav-Combined 
+  */
+
+    /* Hidden by Default */
+    .nav-combined {
+      display: none;
+    }
+
+    .nav-combined a.nav-toggle {
+      display: none;
+
+      text-align: center;
+      text-decoration: none;
+      padding: 0.5em;
+      background: #C1B087;
+      color: white;
+
+      font-family: AGaramond-Regular;
+      font-size: 1.2rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .nav-combined a.nav-toggle:hover {
+      background: #BFA872;
+      -webkit-transition: background-color 0.3s;
+      transition: background-color 0.3s;
+    }
+
+
+
+  /* 
+    RESPONSIVE for the navigation menu 
+  */
+
+    /* shrink the column of Main Nav */
+
+    @media (max-width: 65em) {
+
+        .grid-col-6of10.main-nav {
+          width: 55%;
+        }
+
+        .grid-col-2of10.side-nav {
+          width: 25%;
+        }
+    }
+
+
+    /* Logo / Main Nav / Side Nav sit on its own row */
+    @media (max-width: 52.875em) {
+
+        .logo img {
+          margin-left: 0;
+        }
+
+        .grid-col-2of10.logo {
+          width: 100%;
+          text-align: center;
+          padding-right: 0;
+        }
+
+        .grid-col-6of10.main-nav {
+          width: 100%;
+          padding-left: 0;
+        }
+
+        .grid-col-2of10.side-nav {
+          width: 100%;
+        }
+
+        .main-nav ul.nav-menu {
+          margin: 1em 0 0 0;
+        }
+
+        .side-nav ul.nav-menu {
+          margin-top: 0.5em;
+          padding: 0;
+        }
+    }
+
+    /* Nav Menu goes single column */
+    @media (max-width: 34.438em) {
+
+      /* Adjust Logo Spacing */
+      .logo img {
+        margin-top: 3em;
+        margin-left: 1.5em;
+      }
+
+      /* Hiding the Main-Nav and Side-Nav*/
+      .main-nav ul.nav-menu {
+        display: none;
+      }
+
+      .side-nav ul.nav-menu {
+        display: none;
+      }
+      
+      /* Show the Combined-Nav */
+
+      .nav-combined{
+        display: block;
+        margin-bottom: 2em;
+        margin-top: 1em;
+        background: #F2EDE7;
+      }
+
+      .nav-combined ul.nav-menu {
+        padding-bottom: 1em;
+      }
+
+      .nav-combined .nav-menu li {
+        display: block;
+        margin-right: 2.5em;
+        padding: 0.25em 0;
+      }
+
+      .nav-combined .nav-menu li a {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 30%;
+        margin-right: 30%;
+        font-size: 1rem;
+      }
+
+
+      .nav-combined a.nav-toggle {
+        display: block;
+      }
+
+    }
+
+  
+
+
+/* 
+  FOOTER 
+  Refrence Retrieved from:
+  http://www.lwis.net/journal/2008/02/08/pure-css-sticky-footer/
+*/ 
+
+  html, body, .container { 
+
+    margin: 0;
+    padding: 0;
+    
+  }
+
+  body > .container { 
+    height: auto; 
+    min-height: 100%; 
+  }
+
+  .footer {
+    background-color: #F2EDE7;
+    text-align: center;
+    font-size: 0.875rem;
+    clear: both;
+    position: relative;
+    z-index: 10;
+    /*height: 4em;*/
+    margin-top: -4em;
+
+    width: 100%
+  }
+
+
+  /* copyright Pieced */
+  .footer p {
+    font-size: 0.625rem;
+    clear: left;
+    /*display: inline-block;*/
+    line-height: 4em; /*to vertically align middle */
+  }
+
+  .footer .grid-col-4of10 {
+    padding-right: 0;
+  }
+
+  .container { 
+    padding-bottom: 4em; 
+  }
+
+
+
+  /* 
+    RESPONSIVE for footer
+  */
+
+     @media (max-width: 34.438em) {
+
+      .footer {
+        margin-top: -2em;
+      }
+
+      .footer p {
+        line-height: 2em;
+      }
+
+      .container {
+        padding-bottom: 2em;
+      }
+
+      .footer .grid-col-3of10 {
+        display: none;
+      }
+
+      .footer .grid-col-4of10 {
+        width: 100%;
+      }
+
+      .footer .grid-col-1of10 {
+        display: none;
+      }
+
+      .footer .grid-col-2of10 {
+        display: none;
+      }
+
+     }
+
+
+
+/* 
+  BUTTONS
+*/
+
+  /* Default Button Styling */
+
+  a.button-default {
+    text-decoration: none;
+    font-family: AGaramond-Regular;
+    font-size: .6rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: #C1B087;
+    border: 1px solid #C1B087;
+    background: none;
+    cursor: pointer;
+    /*padding: height - width*/
+    padding: 10px 20px;
+    text-align: center;
+  /*  margin: 100px 0 0 45%;  */
+  }
+
+  a.button-default:hover{
+    background: #C1B087;
+    color: white;
+  }
+
+
+  /* Secondary Button Styling */
+
+  a.button-secondary {
+      text-decoration: none;
+      font-family: AGaramond-Regular;
+      font-size: .6rem;
+      letter-spacing: 0.2rem;
+      text-transform: uppercase;
+      color: #7d7d7d;
+      background: none;
+      cursor: pointer;
+      /*padding: height - width*/
+      padding: 10px 20px;
+      text-align: center;
+  }
+    a.button-secondary:hover{
+      color: #C1B087;
+    }
+
+
+
+  /* 
+    RESPONSIVE for button default and button secondary
+  */
+
+  /* adjusting font-size when resolution gets smaller */
+  @media (max-width: 34.438em) {
+    
+    a.button-default, a.button-secondary {
+      font-size: 1rem;
+    }
+  }
+
+
