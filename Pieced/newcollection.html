@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<!--
+  A Website created for Pieced, a hypothetical store selling 3D woodcraft puzzles, for the purpose of a web design course project
+
+  CREATED BY: IAT339 D101 WINONA HUANG 301165181
+                          JOANNE GOH 301140652;
+-->
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Shop - Pieced</title>
+		<!-- grid.css specifies the grid structure-->
+		<link href="css/grid.css" rel="stylesheet">
+		<!-- main.css includes styling for basic elements: text elements, navigation menu, footer, buttons?-->
+		<link href="css/main.css" rel="stylesheet">
+		
+		<!-- other stylesheets link goes here -->
+		<link href="css/shop.css" rel="stylesheet">
+		<link href="css/breadcrumb.css" rel="stylesheet">
+		<link href="css/modal.css" rel="stylesheet">
+		
+	</head>
+
+
+
+	<body>
+	<div class="container">
+
+		<!-- NAVIGATION MENU -->
+		<section class="grid">
+
+			<div class="grid-col-2of10 logo">
+				<a href="index.html" class="logo-link">
+					<img src="img/logo-pieced.png" width="150" height="53" alt="a logo image for pieced, a company selling 3D woodcraft puzzles">
+				</a>
+			</div> <!-- closing <div class="grid-col-2of10"> -->
+
+			<div class="grid-col-6of10 main-nav">
+				
+				<ul class="nav-menu">
+					<li><a href="shop.html"><span>Shop</span></a></li>
+					<li><a href="events.html"><span>Events</span></a></li>
+					<li><a href="company.html"><span>Company</span></a></li>
+				</ul> <!-- closing <ul class="nav-menu"> -->
+			
+
+				<div class="nav-combined">
+					<a href="#" class="nav-toggle">Menu</a>
+					<ul class="nav-menu">
+						<li><a href="shop.html"><span>Shop</span></a></li>
+						<li><a href="events.html"><span>Events</span></a></li>
+						<li><a href="company.html"><span>Company</span></a></li>
+						<li><a href="#"><span>Search</span></a></li>
+						<li><a href="#modal-cart"><span>Cart</span></a></li>
+					</ul> <!-- closing <ul class="nav-menu"> -->
+				</div> <!-- closing <div class="nav-combined"-->
+
+			</div> <!-- closing <div class="grid-col-6of10 main-nav"> -->
+
+			<div class="grid-col-2of10 side-nav">
+				<ul class="nav-menu">
+					<li><a href="#"><span>Search</span></a></li>
+					<li><a href="#modal-cart"><span>Cart</span></a></li>
+				</ul> <!-- closing <ul class="nav-menu"> -->
+			</div> <!-- closing <div class="grid-col-2of10 side-nav"> -->
+				
+		</section> <!-- closing <div class="grid"> -->
+		<!-- END OF NAVIGATION MENU SECTION -->
+	
+
+
+		<!-- BREADCRUMB -->
+		<section> 
+			<ul class="breadcrumb">
+
+					<li><a href="shop.html">Shop</a></li>
+					<!-- the default puzzle category, may be changed -->
+					<li><a href="#">New Collection</a></li>
+			</ul> <!-- closing .breadcrumb -->
+		</section>
+		<!-- END OF BREADCRUMB -->
+
+
+
+		<div class="grid">
+
+			<!-- FILTER MENU -->
+			<div class="grid-col-2of10 filter-toggle">
+				<a href="#modal-filter" class="button-default">Filter</a>
+			</div>
+
+			<div class="grid-col-2of10 filter-menu">
+
+				<h3> Puzzle Categories </h3>
+
+				<ul>
+			        <li><a href="animalsandnature.html">Animals &amp; Nature</a></li>
+		            <li><a href="dollhouse.html">Dollhouse</a></li>
+		            <li><a href="locomotion.html">Locomotion</a></li>
+	       		</ul>
+
+	       		<ul>
+		            <li><a href="animalsandnature.html">Beginner Level</a></li>
+		            <li><a href="dollhouse.html">Intermediate Level</a></li>
+		            <li><a href="locomotion.html">Expert Level</a></li>
+		        </ul>
+
+		        <ul>
+		            <li><a href="animalsandnature.html">Most Popular</a></li>
+		            <li><a href="newcollection.html">New Collection</a></li>
+		            <li><a href="dollhouse.html">Sale Items</a></li>
+	        	</ul>
+
+      		</div>	<!-- div closes .grid-col-2of10 and .filter-menu -->
+      		<!-- END OF FILTER MENU -->
+
+
+      		<!-- PRODUCT LISTING SECTION  -->
+			<section class="grid-col-8of10 product-listing">
+      			<ul>
+		            <li>
+		              <a href="product-details-blackswan.html"><img src="img/swan4.jpg" height="171" width="250" alt="product image of black wan"></a>
+		              <h3> Black Swan</h3>
+		              <h4> Beginner Level</h4>
+		            </li>
+
+		            <li>
+		              <a href="product-details-angelfish.html"><img src="img/angelfish.jpg" height="171" width="250" alt="product image of angelfish"></a>
+		              <h3> Elegant Angelfish</h3>
+		              <h4> Intermediate Level</h4>
+		            </li>
+
+		            <li>
+		              <a href="#"><img src="img/villa.jpg" height="171" width="250" alt="product image of fantasy villa"></a>
+		              <h3> Fantasy Villa</h3>
+		              <h4> Intermediate Level</h4>
+		            </li>
+
+		            <li>
+		              <a href="#"><img src="img/grizzly.jpg" height="171" width="250" alt="product image of grizzly"></a>
+		              <h3> Grumply Grizzly</h3>
+		              <h4> Expert Level</h4>
+		            </li>
+
+		            <li>
+		              <a href="#"><img src="img/mill-house.jpg" height="171" width="250" alt="product image of mansion"></a>
+		              <h3> Mill House</h3>
+		              <h4> Intermediate Level</h4>
+		            </li>
+
+		            <li>
+		              <a href="product-details-southernmansion.html"><img src="img/southern-mansion.jpg" height="171" width="250" alt="product image of mansion"></a>
+		              <h3> Southern Mansion</h3>
+		              <h4> Intermediate Level</h4>
+		            </li>
+
+   				</ul>
+
+  				<a href="#" class="button-default" title="View More">View More</a>
+
+  			</section> <!-- closing #product-listing and .grid-col-8of10 -->
+
+		</div> <!-- div closes for class "grid" -->
+		<!-- END OF PRODUCT LISTING SECTION -->
+
+
+
+		<!-- Filter Modal -->
+		<div class="modal" id="modal-filter" aria-hidden="true">
+
+		  <div class="modal-dialog">
+
+		    <div class="modal-header">
+				<h3>Puzzle Category</h3>
+				<a href="#close" class="button-close-modal" aria-hidden="true">×</a>
+		    </div> <!-- closing .modal-head -->
+
+		    <div class="modal-body filter-menu">
+
+				<ul>
+			        <li><a href="animalsandnature.html">Animals &amp; Nature</a></li>
+		            <li><a href="dollhouse.html">Dollhouse</a></li>
+		            <li><a href="locomotion.html">Locomotion</a></li>
+	       		</ul>
+
+	       		<ul>
+		            <li><a href="animalsandnature.html">Beginner Level</a></li>
+		            <li><a href="dollhouse.html">Intermediate Level</a></li>
+		            <li><a href="locomotion.html">Expert Level</a></li>
+		        </ul>
+
+		        <ul>
+		            <li><a href="animalsandnature.html">Most Popular</a></li>
+		            <li><a href="newcollection.html">New Collection</a></li>
+		            <li><a href="dollhouse.html">Sale Items</a></li>
+	        	</ul>
+
+		    </div> <!-- closing .modal-body -->
+
+		    <div class="modal-footer">
+				<a href="shop.html" class="button-default">Shop All</a>
+		    </div> <!-- closing .modal-footer -->
+		  
+		  </div> <!-- closing <div class="modal-dialog">-->
+		</div> <!-- closing <div class="modal">-->
+
+
+
+		<!-- CART MODAL -->
+		<div class="modal" id="modal-cart" aria-hidden="true">
+		  
+		  <div class="modal-dialog">
+		    
+		    <div class="modal-header">
+				<h3>My Cart</h3>
+				<a href="#close" class="button-close-modal" aria-hidden="true">×</a>
+		    </div> <!-- closing .modal-head -->
+
+
+		    <div class="modal-body grid">
+
+		    	<div class="grid-col-3of10">
+			    	<img src="img/swan4.jpg" width="120" height="80" alt="a cart item puzzle product black swan">
+			    </div> <!-- closing grid-col-3of7 -->
+
+				<h4 class="grid-col-3of10">Black Swan</h4> 
+				<p class="grid-col-1of10">1X</p> 
+				<p class="grid-col-1of10"> &#36; 45</p>
+				
+				<div class="grid-col-2of10">
+					<a href="#" class="button-secondary" title="Remove">Remove</a>
+				</div> <!-- closing <div class="grid-col-2of10"> -->
+		   
+		    </div> <!-- closing <div class="modal-body grid"> -->
+		    
+
+		    <div class="modal-body grid">
+
+		    	<div class="grid-col-3of10">
+			    	<img src="img/angelfish.jpg" width="120" height="80" alt="a cart item puzzle product angelfish">
+			    </div> <!-- closing grid-col-3of7 -->
+
+				<h4 class="grid-col-3of10">Elegant Angelfish</h4> 
+				<p class="grid-col-1of10">1X</p> 
+				<p class="grid-col-1of10"> &#36; 60</p>
+				
+				<div class="grid-col-2of10">
+					<a href="#" class="button-secondary" title="Remove">Remove</a>
+				</div> <!-- closing grid-col-2of7 -->
+
+		    </div> <!-- closing <div class="modal-body grid"> -->
+
+
+		    <div class="modal-footer">
+		    	<div class="grid">
+		    		<div class="grid-col-7of10 blank"> &nbsp; </div>
+			    	<h3 class="grid-col-2of10">Subtotal</h3>
+			    	<h3 class="grid-col-1of10">&#36; 105</h3>
+			    </div> <!-- closing .grid in .modal-footer -->
+
+				<a href="product-details-checkout.html" class="button-default">Check Out</a>
+
+		    </div> <!-- closing <div class="modal-footer"> -->
+		  
+		  </div> <!-- closing <div class="modal-dialog">-->
+
+  		</div> <!-- closing <div class="modal" id="modal-cart"> -->
+  		<!-- END OF CART MODAL -->
+
+
+
+	</div> <!-- closes container -->
+	
+
+
+	<!-- FOOTER -->
+	<div class="footer grid">
+
+		<div class="grid-col-3of10">
+			<a href="../P02_style_guide/styleguide.html"> <p>Style Guide</p></a>
+		</div> <!-- closing .blank and .gri-col-2of10 -->
+		
+		<div class="grid-col-4of10">
+			<p>Copyright &#169; Pieced</p>
+		</div> <!-- closing.gri-col-6of10 -->
+		
+		<div class="grid-col-1of10">
+			<a href="citations.html">
+				<p>Citations</p> 
+			</a>
+		</div>
+
+		<div class="grid-col-2of10">
+			<a href="https://github.com/sygoh/IAT339-P02">
+				<p>Github Repository</p> 
+			</a>
+		</div> <!-- closing .gri-col-2of10 .blank -->
+		
+	</div> <!-- closing <div class="footer grid"> -->
+	<!-- END OF FOOTER -->
+	
+
+
+	<!-- loading javascript for the nav-menu dropdown -->
+	<script src="js/jquery.js"></script>
+	<script src="js/nav-menu-dropdown.js"></script>
+
+
+
+	</body>
+
+</html>

@@ -1,0 +1,68 @@
+/*
+  A CSS stylesheet created from Tabs N' Blanks, a hypothetical store selling 3D woodcraft puzzles, for the purpose of a web design course project
+
+  CREATED BY: IAT339 D101 WINONA HUANG 301165181
+                          JOANNE GOH 301140652;
+*/
+
+*, *::after, *::before {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+ul.img-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	margin: 2em 0;
+}
+
+ul.img-list li {
+	display: inline-block;
+	height: 171px;
+	margin: 0 0.5em;
+	position: relative;
+	width: 250px;
+}
+
+
+
+.text-content {
+	display: table-cell; /* behave like a <td> (table cell) element */
+	text-align: center;
+	vertical-align: middle;
+}
+
+.text-content h2  {
+	display: table-cell; /* behave like a <td> (table cell) element */
+	text-align: center;
+	vertical-align: middle;
+	color: white;
+}
+
+
+ul.img-list li a:hover .text-content {
+	opacity: 1;
+}
+
+.text-content {
+	background-color: rgba(94, 94, 94, 0.5);
+	cursor: pointer;
+	display: table; /* behave like a <table> element */
+	height: 171px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 250px;
+	opacity: 0;
+
+	-webkit-transition: opacity 500ms;
+	-moz-transition: opacity 500ms;
+	-o-transition: opacity 500ms;
+	transition: opacity 500ms;
+}
+
+.img-list  {
+	text-align: center;
+}
