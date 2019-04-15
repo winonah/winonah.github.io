@@ -1,0 +1,467 @@
+/*
+  A CSS stylesheet created from Tabs N' Blanks, a hypothetical store selling 3D woodcraft puzzles, for the purpose of a web design course project
+
+  CREATED BY: IAT339 D101 WINONA HUANG 301165181
+                          JOANNE GOH 301140652;
+*/
+
+
+
+/*
+  STYLE GUIDE STYLING 
+  Default styling for the style guide 
+*/
+
+  *, *::after, *::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Avenir-Book;
+    font-size: 16px;
+    padding: 1rem;
+  }
+
+  section:not([id]) {
+    margin: 1em 0;
+    padding: 0.5em 0;
+    border-top: 1px solid #333;
+  }
+
+  section h3 {
+    font-family: Avenir-Medium;
+    margin-bottom: 0.5em;
+    color: #CAC9C7;
+  }
+
+  section p {
+    margin-top: 0;
+  }
+
+  section code {
+    font-family: Avenir-Book;
+    background-color: #EEE;
+    padding: 0.5em 0.75em;
+    line-height: 2em;
+  }
+
+  section h2 {
+    font-family: Avenir-Medium;
+  }
+
+
+
+
+/* 
+  INTERACTIVE ELEMENTS -------------------
+*/
+
+/* Styling for the navigation button */
+/* Reference Retrieved from: 
+    http://cssmenumaker.com/menu/simple-responsive-menu# */
+  
+  .nav-menu {
+    width: auto; /* width of underline */
+  }
+
+  .nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    display: block;
+  }
+
+  .nav-menu ul li {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-menu.align-right ul li {
+    float: right;
+  }
+
+  .nav-menu.align-center ul {
+    text-align: center;
+  }
+
+  .nav-menu ul li a {
+    color: #7D7D7D;
+    text-decoration: none;
+    display: block;
+    padding: 0.8rem 0.8em;
+    margin: 0 1.25rem;
+    font-family: Avenir-Roman;
+    letter-spacing: 0.15rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  .nav-menu ul li a:hover {
+    color: #C1B087;
+  } 
+
+
+  .nav-menu ul li a:hover:before {
+    width: 100%;
+  }
+
+  .nav-menu ul li a:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px; /*stroke weight */
+    width: 0;
+    background: #C1B087;
+    
+    /*animation speed left to right*/
+    -webkit-transition: width .25s;
+    -moz-transition: width .25s;
+    -ms-transition: width .25s;
+    -o-transition: width .25s;
+    transition: width .25s;
+    
+  }
+
+  .nav-menu ul li.active a:before {
+    width: 100%;
+  }
+
+
+/* example code
+.button-nav {
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  color: #FFF;
+  background-color: #333;
+  border-radius: 0.25em;
+  text-decoration: none;
+  -webkit-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
+.button-nav:hover, .button-nav:focus {
+  background-color: #999;
+}
+*/
+
+
+/* Styling for In-Text Link */
+  .in-text-link {
+    font-family: Avenir-Book; 
+    font-size: .875rem;
+    color: #5E5E5E;
+    letter-spacing: 0.05em;
+  }
+  .in-text-link a {
+    font-family: Avenir-Roman;
+    color: #5E5E5E;
+  }
+
+  .in-text-link a:hover {
+    /*color: #A47D81;*/
+    color: #C1B087;
+    text-decoration: none;
+  }
+
+
+/* Styling for the Submit and Reset Buttons */
+  /* Default/Primary Button */
+  .button-default {
+    font-family: AGaramond-Regular;
+    font-size: 0.6rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: #C1B087;
+    border: 1px solid #C1B087;
+    background: none;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    margin-right: 1em;
+  }
+
+  .button-default:hover {
+    background: #C1B087;
+    color: white;
+  }
+
+  .button-secondary {
+  font-family: AGaramond-Regular;
+  font-size: .6rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: #7D7D7D;
+  border: none;
+  background: none;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  margin-right: 1em;
+}
+
+ .button-secondary:hover{
+    color: #C1B087;
+  }
+
+
+
+
+
+/* Styling for Form Text Fields and Labels */
+
+  form {
+    display: inline-block;
+    background-color: white;
+    padding: 0;
+  }
+
+  label {
+    font-family: Avenir-Book;
+    color: #5E5E5E;
+    margin-top: 0.8em;
+    margin-bottom: 0.3em;
+    display: block;
+  }
+
+.form-field {
+    font-family: Avenir-Book;
+    text-transform: uppercase;
+    width:30em;
+    background: transparent;
+    margin-top:1em;
+    border: 1px solid #d8d8d8;
+    padding: 1em 1em;
+    -webkit-transition: all 0.2s ease;
+     -moz-transition: all 0.2s ease;
+       -o-transition: all 0.2s ease;
+      -ms-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+}
+
+
+/* 
+  TEXT ELEMENTS -------------------
+*/
+
+  /* loading fonts */
+  /* Reference Retrieved from:
+    http://www.w3schools.com/css/css3_fonts.asp */
+  
+  @font-face {
+      font-family: AGaramond-Regular;
+      src: url(fonts/AGaramondPro-Regular.otf);   
+  }
+
+  @font-face {
+      font-family: Avenir-Black;
+      src: url(fonts/Avenir-Black.ttf);   
+  }
+
+  @font-face {
+      font-family: Avenir-Book;
+      src: url(fonts/Avenir-Book.ttf);   
+  }
+
+  @font-face {
+      font-family: Avenir-Medium;
+      src: url(fonts/Avenir-Medium.ttf);   
+  }
+
+  @font-face {
+      font-family: Avenir-Roman;
+      src: url(fonts/Avenir-Roman.ttf);   
+  }
+
+
+  @font-face {
+      font-family: Avenir-Heavy;
+      src: url(fonts/Avenir-Heavy.ttf);   
+  }
+
+
+  
+
+
+/* Styling for Headings */
+  #sample-head1 {
+    font-family: AGaramond-Regular;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    color: #5e5e5e;
+    margin-bottom: 0.5em;
+  }
+
+  #sample-head2 {
+    font-family: Avenir-Heavy;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 0..025rem;
+    color: #5E5E5E;
+    margin-bottom: 0.5em;
+  }
+
+  #sample-head3 {
+    font-family: Avenir-Medium;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    color: #5e5e5e;
+    text-transform: UPPERCASE;
+    margin-bottom: 0.5em;
+  }
+   #sample-head4 {
+    font-family: Avenir-Roman;
+    font-size: 0.875rem;
+    letter-spacing: 0.05rem;
+    color: #7d7d7d;
+    margin-bottom: 0.5em;
+  }
+
+
+/* Styling for Content Text / Paragraph */
+  #sample-paragraph {
+    font-family: Avenir-Book;
+    font-size: .81rem;
+    color: #5E5E5E;
+  }
+
+
+/* Styling for Bulleted Lists (Filter Options) */
+  ul.filter-menu li{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 0.5em;
+   
+  }
+
+  ul.filter-menu li a {
+    font-family: AGaramond-Regular;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    
+    color: #7D7D7D;
+    text-decoration: none;
+  }
+
+  ul.filter-menu li a:hover {
+    color: #C1B087;
+  } 
+
+  ul.filter-menu li a:active {
+    color: #C1B087;
+  } 
+
+
+
+/* Styling for Numbered Lists */
+  #numbered-lists {
+    font-family: Avenir-Book;
+    font-size: 0.81rem;
+    color: #5E5E5E;
+    padding: 0;
+    margin: 0 0 0 1.5em;
+    list-style-type: lower-alpha;
+  }
+
+/* 
+  COMBINED ELEMENTS -------------------
+*/
+
+/* Styling for Main Navigation Menu */
+/* Main Navigation Menu shares the same styling as the navigation button above: #nav-menu; */
+
+  /* Home Navigation Button stays active */
+  .nav-menu ul li.active a {
+    color: #C1B087;
+  }
+
+  .nav-menu ul li.active a:before {
+    color: #C1B087;
+    width: 100%;
+  }
+
+  @media (max-width: 40rem) {
+    .nav-menu ul li {
+      float: none;
+      display: block;
+    }
+
+    .nav-menu ul li a {
+      width: 100%;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+  }
+
+
+/* Styling for Product Listing */
+/* Reference Retrieved from:
+  http://designshack.net/articles/css/5-simple-and-practical-css-list-styles-you-can-copy-and-paste/ */
+
+  #product-listing {
+    width: 100%;
+    margin: 0 auto;
+    overflow: auto;
+    float: left;
+    padding: 0;
+  }
+   
+  #product-listing ul {
+    list-style-type: none;
+  }
+
+  #product-listing li {
+    width: auto;
+    padding: 1em;
+    overflow: auto;
+    float: left;
+  }
+
+  #product-listing li img {
+    margin-bottom: 1.2em;
+    width: auto;
+   /* background-color: rgba(202, 201, 199, 0.75);*/
+  }
+
+/*
+  #product-listing li a {
+    width: 100%;
+    background-color: rgba(202, 201, 199, 0.75);
+  }
+*/
+
+  /*#product-listing li img:hover {
+  -webkit-box-shadow: 0px 0px 7px #C1B087;
+  box-shadow: 0px 0px 7px #C1B087;
+  }*/
+
+  .product-name {
+    font-family: Avenir-Medium;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #5E5E5E;
+    clear: left;
+    margin-bottom: 0.18em;
+    /*
+    text-align: center;
+    vertical-align: middle;
+    */
+  }
+
+  .product-caption {
+    font-family: Avenir-Roman;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    color: #7D7D7D;
+    clear: left;
+    overflow: auto;
+  }
+
